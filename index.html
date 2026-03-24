@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriyan Store | Premium Gear</title>
+    <meta name="description" content="The ultimate online store for premium DJ gear and merchandise.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Animation Elements -->
+    <div class="background-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="gradient-text">ORIYAN</span> STORE
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title hidden-element">Level Up Your <br><span class="gradient-text">Performance</span></h1>
+            <p class="hero-subtitle hidden-element">Pro-grade equipment & exclusive merch for the modern artist. Experience the best sound quality tailored for you.</p>
+            <div class="hero-buttons hidden-element">
+                <a href="#products" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                <a href="#video-showcase" class="btn btn-secondary"><i class="fas fa-play"></i> Watch Demo</a>
+            </div>
+        </div>
+        <div class="hero-visual hidden-element">
+            <!-- Glassmorphism Card containing a video -->
+            <div class="glass-card hero-video-card">
+                <!-- Using a high-quality free stock video -->
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-dj-playing-music-at-a-nightclub-424-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card hidden-element">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fast Shipping</h3>
+                    <p>Get your gear delivered anywhere in the world within 3-5 business days.</p>
+                </div>
+                <div class="feature-card hidden-element">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Secure Payment</h3>
+                    <p>Your transactions are protected with enterprise-grade encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header hidden-element">
+                <h2>Featured <span class="gradient-text">Products</span></h2>
+                <p>Discover our top-rated equipment</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card hidden-element">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=800&auto=format&fit=crop" alt="DJ Controller">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Equipment</span>
+                        <h3 class="product-title">Pro Nexus Controller</h3>
+                        <div class="product-price-row">
+                            <span class="price">$899.00</span>
+                            <button class="add-to-cart-btn" data-id="1" data-name="Pro Nexus Controller" data-price="899.00">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card hidden-element delay-1">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" alt="Wireless Headphones">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Audio</span>
+                        <h3 class="product-title">Studio Beats Wireless</h3>
+                        <div class="product-price-row">
+                            <span class="price">$249.00</span>
+                            <button class="add-to-cart-btn" data-id="2" data-name="Studio Beats Wireless" data-price="249.00">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart-msg">Your cart is empty.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalAmount">$0.00</span>
+                </div>
+                <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i> Item added to cart!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
